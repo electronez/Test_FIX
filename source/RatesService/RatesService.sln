@@ -1,0 +1,90 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29728.190
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RatesWebService", "RatesWebService\RatesWebService.csproj", "{61CCB9FF-E6FB-4CFC-8AE9-D0AA5BB3E131}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{7BFD3F06-C8CD-46C3-9241-C49D844668BC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RatesStorageService", "RatesStorageService\RatesStorageService.csproj", "{C9767BF0-4209-40EB-8C6B-581F947A9F98}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "RatesSources", "RatesSources", "{A00BE711-82A9-49A9-B417-CBC2E47B0399}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RatesSources.Common", "RatesSources\RatesSources.Common\RatesSources.Common.csproj", "{8AA674BC-BDAC-47A7-BC92-DC33D27037BD}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OpenExchangeRatesSource", "RatesSources\OpenExchangeRatesSource\OpenExchangeRatesSource.csproj", "{637FF4BC-3742-4BF3-83E4-A139DDB42DC3}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RatesService", "RatesService\RatesService.csproj", "{866921F6-A8B7-4208-8469-93350F9B7EC9}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rates.Common", "Rates.Common\Rates.Common.csproj", "{39785FA5-1888-4AD8-9C86-2EFB379946EF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UnitTests", "UnitTests", "{41305E65-54A8-457A-91EC-F2180546F166}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RatesStorageServiceTest", "UnitTests\RatesStorageServiceTest\RatesStorageServiceTest.csproj", "{1BB5FBD1-8922-47AC-8711-40B4018AC042}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenExchangeRatesSourceTest", "UnitTests\OpenExchangeRatesSourceTest\OpenExchangeRatesSourceTest.csproj", "{A71E7AA2-E6A5-40E7-9BC5-BE6B6927E807}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RatesServiceTest", "UnitTests\RatesServiceTest\RatesServiceTest.csproj", "{26238EEF-09EA-4D03-BC98-CE5E5D98EFD0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{61CCB9FF-E6FB-4CFC-8AE9-D0AA5BB3E131}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61CCB9FF-E6FB-4CFC-8AE9-D0AA5BB3E131}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61CCB9FF-E6FB-4CFC-8AE9-D0AA5BB3E131}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61CCB9FF-E6FB-4CFC-8AE9-D0AA5BB3E131}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7BFD3F06-C8CD-46C3-9241-C49D844668BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7BFD3F06-C8CD-46C3-9241-C49D844668BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7BFD3F06-C8CD-46C3-9241-C49D844668BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7BFD3F06-C8CD-46C3-9241-C49D844668BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C9767BF0-4209-40EB-8C6B-581F947A9F98}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9767BF0-4209-40EB-8C6B-581F947A9F98}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9767BF0-4209-40EB-8C6B-581F947A9F98}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9767BF0-4209-40EB-8C6B-581F947A9F98}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8AA674BC-BDAC-47A7-BC92-DC33D27037BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8AA674BC-BDAC-47A7-BC92-DC33D27037BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8AA674BC-BDAC-47A7-BC92-DC33D27037BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8AA674BC-BDAC-47A7-BC92-DC33D27037BD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{637FF4BC-3742-4BF3-83E4-A139DDB42DC3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{637FF4BC-3742-4BF3-83E4-A139DDB42DC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{637FF4BC-3742-4BF3-83E4-A139DDB42DC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{637FF4BC-3742-4BF3-83E4-A139DDB42DC3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{866921F6-A8B7-4208-8469-93350F9B7EC9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{866921F6-A8B7-4208-8469-93350F9B7EC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{866921F6-A8B7-4208-8469-93350F9B7EC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{866921F6-A8B7-4208-8469-93350F9B7EC9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{39785FA5-1888-4AD8-9C86-2EFB379946EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39785FA5-1888-4AD8-9C86-2EFB379946EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39785FA5-1888-4AD8-9C86-2EFB379946EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39785FA5-1888-4AD8-9C86-2EFB379946EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1BB5FBD1-8922-47AC-8711-40B4018AC042}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1BB5FBD1-8922-47AC-8711-40B4018AC042}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1BB5FBD1-8922-47AC-8711-40B4018AC042}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1BB5FBD1-8922-47AC-8711-40B4018AC042}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A71E7AA2-E6A5-40E7-9BC5-BE6B6927E807}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A71E7AA2-E6A5-40E7-9BC5-BE6B6927E807}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A71E7AA2-E6A5-40E7-9BC5-BE6B6927E807}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A71E7AA2-E6A5-40E7-9BC5-BE6B6927E807}.Release|Any CPU.Build.0 = Release|Any CPU
+		{26238EEF-09EA-4D03-BC98-CE5E5D98EFD0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26238EEF-09EA-4D03-BC98-CE5E5D98EFD0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26238EEF-09EA-4D03-BC98-CE5E5D98EFD0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26238EEF-09EA-4D03-BC98-CE5E5D98EFD0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{8AA674BC-BDAC-47A7-BC92-DC33D27037BD} = {A00BE711-82A9-49A9-B417-CBC2E47B0399}
+		{637FF4BC-3742-4BF3-83E4-A139DDB42DC3} = {A00BE711-82A9-49A9-B417-CBC2E47B0399}
+		{1BB5FBD1-8922-47AC-8711-40B4018AC042} = {41305E65-54A8-457A-91EC-F2180546F166}
+		{A71E7AA2-E6A5-40E7-9BC5-BE6B6927E807} = {41305E65-54A8-457A-91EC-F2180546F166}
+		{26238EEF-09EA-4D03-BC98-CE5E5D98EFD0} = {41305E65-54A8-457A-91EC-F2180546F166}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1C7A0AF2-154E-4624-9091-0FDD52A0EFFC}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,28 @@
+version: '3.4'
+
+services:
+  rateswebservice:
+    image: ${DOCKER_REGISTRY-}rateswebservice
+    restart: always
+    env_file: 
+      - ./environment.env
+    build:
+      context: .
+      dockerfile: RatesWebService/Dockerfile
+    ports:
+      - "5001:80"
+    depends_on:
+      - postgres_db
+
+  postgres_db:
+    image: postgres:latest
+    restart: always
+    environment:
+      POSTGRES_USER: 'postgres'
+      POSTGRES_PASSWORD: 'postgres'
+      POSTGRES_DB: 'postgres'
+    ports:
+      - "5432:5432"
+    volumes:
+      - ../../scripts/init.sql:/docker-entrypoint-initdb.d/init.sql
+    container_name: postgres_db

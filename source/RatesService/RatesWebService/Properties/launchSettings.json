@@ -1,0 +1,28 @@
+{
+  "iisSettings": {
+    "windowsAuthentication": false,
+    "anonymousAuthentication": true,
+    "iisExpress": {
+      "applicationUrl": "http://localhost:50900",
+      "sslPort": 0
+    }
+  },
+  "profiles": {
+    "RatesWebService": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "DB_ConnectionString": "Server=localhost;Port=5432;Database=postgres;User Id=postgres;Password=postgres;",
+        "RatesProviderID_OpenExchangeRates": "9d834174c63f450ab823f1639daa7cf7",
+        "ExpiredMinutes":  "5" 
+      },
+      "applicationUrl": "http://localhost:5000"
+    },
+    "Docker": {
+      "commandName": "Docker",
+      "launchBrowser": true,
+      "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}",
+      "publishAllPorts": true
+    }
+  }
+}
