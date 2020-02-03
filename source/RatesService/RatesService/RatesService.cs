@@ -8,17 +8,26 @@
     using RatesSources.Common;
     using RatesStorageService;
 
+    /// <summary>
+    /// Сервис для получения курсов валют
+    /// </summary>
     public class RatesService : IRatesService
     {
         private readonly IRatesSourceProvider ratesSourceProvider;
         private readonly IRatesStorageService ratesStorageService;
         private readonly int invinvalidateMinutes;
 
+        /// <summary>
+        /// Инициализирует экземпляр класса <see cref="RatesService"/>
+        /// </summary>
+        /// <param name="ratesSourceProvider">Провайдер источника данных о курсах валют</param>
+        /// <param name="ratesStorageService">Сервис хранения данных о курсах валют</param>
+        /// <param name="invalidateMinutes">Время актуальности курсов валют</param>
         public RatesService(IRatesSourceProvider ratesSourceProvider, IRatesStorageService ratesStorageService, int invalidateMinutes)
         {
             this.ratesSourceProvider = ratesSourceProvider ?? throw new ArgumentNullException(nameof(ratesSourceProvider));
             this.ratesStorageService = ratesStorageService ?? throw new ArgumentNullException(nameof(ratesStorageService));
-            this.invinvalidateMinutes = invalidateMinutes;
+            this.invinvalidateMinutes = invalidateMinutes > 0 ? invalidateMinutes : 5;
         }
 
         /// <inheritdoc cref="IRatesService"/>

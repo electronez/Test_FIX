@@ -3,8 +3,14 @@
     using FluentNHibernate.Mapping;
     using global::RatesStorageService.Entities;
 
+    /// <summary>
+    /// Описывает отображение класса <see cref="RatesHistory"/> в БД
+    /// </summary>
     internal class RatesHistoryMap : ClassMap<RatesHistory>
     {
+        /// <summary>
+        /// Инициализирует новый экземпляр класса <see cref="RatesHistoryMap"/>.
+        /// </summary>
         public RatesHistoryMap()
         {
             this.Schema("public");
