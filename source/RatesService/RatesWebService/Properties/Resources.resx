@@ -120,6 +120,9 @@
   <data name="databaseConnectionStringError" xml:space="preserve">
     <value>Ошибка при получении строки подключения к БД</value>
   </data>
+  <data name="exceptionMessage" xml:space="preserve">
+    <value>Произошла ошибка. Обратитесь к разработчику</value>
+  </data>
   <data name="expiredTimeCastError" xml:space="preserve">
     <value>Ошибка при парсинге времени действия кэша</value>
   </data>

@@ -70,6 +70,15 @@ namespace RatesWebService.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Произошла ошибка. Обратитесь к разработчику.
+        /// </summary>
+        internal static string exceptionMessage {
+            get {
+                return ResourceManager.GetString("exceptionMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Ошибка при парсинге времени действия кэша.
         /// </summary>
         internal static string expiredTimeCastError {

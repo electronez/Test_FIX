@@ -1,6 +1,7 @@
 namespace RatesWebService
 {
     using System;
+    using System.Diagnostics.CodeAnalysis;
     using System.Net.Http;
     using FluentNHibernate.Cfg;
     using FluentNHibernate.Cfg.Db;
@@ -9,14 +10,15 @@ namespace RatesWebService
     using Microsoft.Extensions.Configuration;
     using Microsoft.Extensions.DependencyInjection;
     using Microsoft.Extensions.Hosting;
-    using NHibernate;
     using NHibernate.Dialect;
     using OpenExchangeRatesSource;
     using RatesService;
     using RatesSources.Common;
     using RatesStorageService;
+    using RatesWebService.Middleware;
     using RatesWebService.Properties;
 
+    [ExcludeFromCodeCoverage]
     public class Startup
     {
         public Startup(IConfiguration configuration)
@@ -45,6 +47,7 @@ namespace RatesWebService
                 app.UseDeveloperExceptionPage();
             }
 
+            app.UseMiddleware<ErrorHandlingMiddleware>();
             app.UseRouting();
 
             app.UseEndpoints(endpoints =>
@@ -58,7 +61,7 @@ namespace RatesWebService
             var connectionString = this.Configuration["DB_ConnectionString"] ?? throw new InvalidOperationException(Resources.databaseConnectionStringError);
             serviceCollection.AddSingleton(Fluently.Configure()
                 .Database(PostgreSQLConfiguration.Standard.ConnectionString(connectionString)
-                    .Dialect<PostgreSQL82Dialect>().ShowSql())
+                    .Dialect<PostgreSQL82Dialect>())
                 .Mappings(RatesStorageService.RegisterMapping)
                 .BuildSessionFactory());
         }

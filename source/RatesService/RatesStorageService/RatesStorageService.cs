@@ -10,6 +10,9 @@
     using NHibernate.Transaction;
     using Rates.Common;
 
+    /// <summary>
+    /// Сервис получения/сохранения данных в БД
+    /// </summary>
     public class RatesStorageService : IRatesStorageService
     {
         private readonly ISessionFactory sessionFactory;
@@ -37,22 +40,14 @@
             mappingConfiguration.FluentMappings.AddFromAssemblyOf<RatesHistoryMap>();
         }
 
-        /// <summary>
-        /// Получение курса валют из БД
-        /// </summary>
-        /// <param name="from">Продаваемая валюта</param>
-        /// <param name="to">Покупаемая валюта</param>
-        /// <returns>Коллекция курса валют</returns>
+        /// <inheritdoc cref="IRatesStorageService"/>
         public IEnumerable<ExpiredRateInfo> GetRates(string from, string to)
         {
             return this.GetRates(from).Where(o => o.To == to);
         }
 
-        /// <summary>
-        /// Получение курса валют из БД
-        /// </summary>
-        /// <param name="from">Продаваемая валюта</param>
-        /// <returns>Коллекция курса валют</returns>
+
+        /// <inheritdoc cref="IRatesStorageService"/>
         public IEnumerable<ExpiredRateInfo> GetRates(string from)
         {
             using (var session = this.sessionFactory.OpenSession())
@@ -64,11 +59,7 @@
             }
         }
 
-        /// <summary>
-        /// Сохранение курса валют в БД
-        /// </summary>
-        /// <param name="from">Продаваемая валюта</param>
-        /// <param name="rates">Курс валют</param>
+        /// <inheritdoc cref="IRatesStorageService"/>
         public void SaveRates(string from, IEnumerable<ExpiredRateInfo> rates)
         {
             using (var session = this.sessionFactory.OpenSession())

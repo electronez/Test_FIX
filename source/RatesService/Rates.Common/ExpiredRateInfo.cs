@@ -2,6 +2,9 @@
 {
     using System;
 
+    /// <summary>
+    /// Информация о запрошенном курсе с указанием даты истечения срока действия
+    /// </summary>
     public class ExpiredRateInfo : RateInfo
     {
         /// <summary>
